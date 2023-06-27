@@ -1,5 +1,3 @@
-package testng;
-
 import java.time.Duration;
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
