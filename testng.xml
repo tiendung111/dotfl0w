@@ -19,5 +19,4 @@
 			<class name="testng.Assignment" />
 		</classes>
 	</test>
-</suite> <!--
-Suite -->
+</suite>
