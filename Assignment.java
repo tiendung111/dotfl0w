@@ -1,9 +1,12 @@
 import java.time.Duration;
+import java.util.List;
+
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class Assignment {
 	private WebDriver driver;
@@ -28,6 +31,9 @@ public class Assignment {
 
 	@Test
 	public void testWeb() throws Exception {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Thread.sleep(3000);
+
 		// Search “iphone 14 pro”
 		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("iphone 14 pro" + Keys.RETURN);
 		Thread.sleep(3000);
@@ -52,6 +58,44 @@ public class Assignment {
 		driver.findElement(By.xpath("(//p[@data-unify='Typography'][contains(.,'Paling Sesuai')])[1]")).click();
 		driver.findElement(By.xpath("//p[@data-unify='Typography'][contains(.,'Harga Terendah')]")).click();
 		Thread.sleep(3000);
+
+		// Scroll down to get all the items on page 1
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(0,4000)");
+		Thread.sleep(3000);
+		// Find all the item names on the page 1
+		List<WebElement> pageOneItemNames = driver.findElements(By.xpath("//div[@data-testid='spnSRPProdName']"));
+		// Print out the names of all the items on page 1
+		for (WebElement itemName : pageOneItemNames) {
+			System.out.println(itemName.getText());
+		}
+
+		// Direct to page 2
+		driver.findElement(By.xpath("//button[@class='css-bugrro-unf-pagination-item'][contains(.,'2')]")).click();
+		Thread.sleep(3000);
+		// Scroll down to get all the items on page 2
+		js.executeScript("window.scrollBy(0,4500)");
+		Thread.sleep(3000);
+		// Find all the item names on the page 2
+		List<WebElement> pageTwoItemNames = driver.findElements(By.xpath("//div[@data-testid='spnSRPProdName']"));
+		// Print out the names of all the items on page 2
+		for (WebElement itemName : pageTwoItemNames) {
+			System.out.println(itemName.getText());
+		}
+
+		// Direct to page 3
+		driver.findElement(By.xpath("//button[@class='css-bugrro-unf-pagination-item'][contains(.,'3')]")).click();
+		Thread.sleep(3000);
+		// Scroll down to get all the items on page 3
+		js.executeScript("window.scrollBy(0,3500)");
+		Thread.sleep(3000);
+		// Find all the item names on the page 3
+		List<WebElement> pageThreeItemNames = driver.findElements(By.xpath("//div[@data-testid='spnSRPProdName']"));
+		// Print out the names of all the items on page 3
+		for (WebElement itemName : pageThreeItemNames) {
+			System.out.println(itemName.getText());
+		}
 	}
 
 	@AfterTest
