@@ -69,6 +69,7 @@ public class Assignment {
 		// Find all the item names on the page 1
 		List<WebElement> pageOneItemNames = driver.findElements(By.xpath("//div[@data-testid='spnSRPProdName']"));
 		// Print out the names of all the items on page 1
+		System.out.println("LIST OF ITEM NAMES FOR PAGE 1");
 		for (WebElement itemName : pageOneItemNames) {
 			System.out.println(itemName.getText());
 		}
@@ -82,6 +83,7 @@ public class Assignment {
 		// Find all the item names on the page 2
 		List<WebElement> pageTwoItemNames = driver.findElements(By.xpath("//div[@data-testid='spnSRPProdName']"));
 		// Print out the names of all the items on page 2
+		System.out.println("LIST OF ITEM NAMES FOR PAGE 2");
 		for (WebElement itemName : pageTwoItemNames) {
 			System.out.println(itemName.getText());
 		}
@@ -95,6 +97,7 @@ public class Assignment {
 		// Find all the item names on the page 3
 		List<WebElement> pageThreeItemNames = driver.findElements(By.xpath("//div[@data-testid='spnSRPProdName']"));
 		// Print out the names of all the items on page 3
+		System.out.println("LIST OF ITEM NAMES FOR PAGE 3");
 		for (WebElement itemName : pageThreeItemNames) {
 			System.out.println(itemName.getText());
 		}
