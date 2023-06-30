@@ -1,6 +1,6 @@
 # Step 1: Go to Eclipse Marketplace and install TestNG library
 ![1](https://github.com/tiendung111/dotfl0w/assets/55966725/e69c4819-c67d-4a60-9e0d-da8e9ae1a7ef)
-# Step 2: Create a new Java project and install Selenium library via this link: https://drive.google.com/file/d/1ATKS_Gb0kY7VwLeGsBw-u5DF11nrHYwS/view?usp=drive_link
+# Step 2: Create a new Java project and install Selenium and SLF4J library via this link: https://drive.google.com/file/d/1Cvccv30isVsTvkjEAWGWUhmf6-9HcrLF/view?usp=drive_link
 ![2](https://github.com/tiendung111/dotfl0w/assets/55966725/0f8c6e12-1222-4e7e-8264-3831f6b96f29)
 ![3](https://github.com/tiendung111/dotfl0w/assets/55966725/aaf58597-155b-4ecb-ae36-1893a93f7bf3)
 # Step 3: Add TestNG library into the project that we just created
