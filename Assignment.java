@@ -78,7 +78,7 @@ public class Assignment {
 		driver.findElement(By.xpath("//button[@class='css-bugrro-unf-pagination-item'][contains(.,'2')]")).click();
 		Thread.sleep(3000);
 		// Scroll down to get all the items on page 2
-		js.executeScript("window.scrollBy(0,4500)");
+		js.executeScript("window.scrollBy(0,4000)");
 		Thread.sleep(3000);
 		// Find all the item names on the page 2
 		List<WebElement> pageTwoItemNames = driver.findElements(By.xpath("//div[@data-testid='spnSRPProdName']"));
@@ -92,7 +92,7 @@ public class Assignment {
 		driver.findElement(By.xpath("//button[@class='css-bugrro-unf-pagination-item'][contains(.,'3')]")).click();
 		Thread.sleep(3000);
 		// Scroll down to get all the items on page 3
-		js.executeScript("window.scrollBy(0,3500)");
+		js.executeScript("window.scrollBy(0,3000)");
 		Thread.sleep(3000);
 		// Find all the item names on the page 3
 		List<WebElement> pageThreeItemNames = driver.findElements(By.xpath("//div[@data-testid='spnSRPProdName']"));
